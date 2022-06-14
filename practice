@@ -1,0 +1,44 @@
+
+
+in the html
+<div class="cards"></div>
+<div class="cards"></div>
+<div class="cards"></div>
+<div class="cards"></div>
+<div class="cards"></div>
+<div class="cards"></div>
+<div class="cards"></div>
+<div class="cards"></div>
+<div class="cards"></div>
+<div class="cards"></div>
+<div class="cards"></div>
+<div class="cards"></div>
+
+<div class="left-container">
+<div><img src="assets/Sailor-Moon.png" alt="Sailor Moon" width="200" class="center">
+</div>
+
+<div class="center"> 
+</div>
+
+<div class="right-container"><img src="assets/Luna.png" alt="Luna" width="150">
+
+css formating
+.left-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    font-family: 'Great Vibes';
+    color: #FFF6F9;
+    font-size: 2em;
+    font-weight: bold;
+    grid-gap: 5px;
+    background-color: #5A77D8;
+}
+
+.right-container {
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}

@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(#FFAFCC, #FFF6F9, #C3DBFD)
+    }
+
+html {
+    min-height: 100vh;
+}
+
+h1{
+    text-align: center;
+    color: #5A77D8;
+    font-family: 'Great Vibes', cursive;
+    font-size: 75px;
+}
+
+.top-container {
+    display: grid;
+    grid-gap: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Abril Fatface';
+    color: #5A77D8;
+    text-align: center;
+}
+
+section {
+    display: grid;
+    box-sizing: border-box;
+    margin-right: 200px;
+    grid-template-columns: repeat(4, 13rem);
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    perspective: 900px;
+    transform: rotateY(-50%, -50%);
+}
+
+.front {
+    width: 200px;
+    height: 250px;
+    background: #5A77D8;
+    position: absolute;
+}
+
+.back{
+    width: 200px;
+    height: 250px;
+    background: #5A77D8;
+    backface-visibility: hidden;
+}
+
+.cards {
+    position: relative;
+    padding-left: 200px;
+    padding-right: 250px;
+    transform-style: preserve-3d;
+    transition: all 0.9s ease;
+    transform: rotateY(180deg);
+}
+
+.flipCard {
+    transform: rotateY(180deg);
+}
