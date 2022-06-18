@@ -6,22 +6,28 @@ const cardFlip = document.querySelector("span");
 //format image sizes
 
 //information for the cards
+function show_image(src, id){
+    var img = document.createElement("img");
+    imgSrc = "src"
+    imgId="name"
+    document.body.appendChild(img);
+}
 //Make an array for 12 cards
 const getData = () => [
 //first set of cards
-    {imgSrc:"./assets/Sailor-Jupiter.png", name:"Jupiter"},
-    {imgSrc:"./assets/Sailor-Mars.png", name:"Mars"},
-    {imgSrc:"./assets/Sailor-Neptune.png", name:"Neptune"},
-    {imgSrc:"./assets/Sailor-Pluto.png", name:"Pluto"},
-    {imgSrc:"./assets/Sailor-Saturn.png", name:"Saturn"},
-    {imgSrc:"./assets/Sailor-Venus.png", name:"Venus"},
+    {imgId:"Jupiter", imgSrc:"./assets/Sailor-Jupiter.png"},
+    {imgId:"Mars", imgSrc:"./assets/Sailor-Mars.png"},
+    {imgId:"Neptune", imgSrc:"./assets/Sailor-Neptune.png"},
+    {imgId:"Pluto", imgSrc:"./assets/Sailor-Pluto.png"},
+    {imgId:"Saturn", imgSrc:"./assets/Sailor-Saturn.png"},
+    {imgId:"Venus", imgSrc:"./assets/Sailor-Venus.png"},
 //second set of cards
-    {imgSrc:"./assets/Sailor-Jupiter.png", name:"Jupiter"},
-    {imgSrc:"./assets/Sailor-Mars.png", name:"Mars"},
-    {imgSrc:"./assets/Sailor-Neptune.png", name:"Neptune"},
-    {imgSrc:"./assets/Sailor-Pluto.png", name:"Pluto"},
-    {imgSrc:"./assets/Sailor-Saturn.png", name:"Saturn"},
-    {imgSrc:"./assets/Sailor-Venus.png", name:"Venus"},
+    {imgId:"Jupiter", imgSrc:"./assets/Sailor-Jupiter.png"},
+    {imgId:"Mars", imgSrc:"./assets/Sailor-Mars.png"},
+    {imgId:"Neptune", imgSrc:"./assets/Sailor-Neptune.png"},
+    {imgId:"Pluto", imgSrc:"./assets/Sailor-Pluto.png"},
+    {imgId:"Saturn", imgSrc:"./assets/Sailor-Saturn.png"},
+    {imgId:"Venus", imgSrc:"./assets/Sailor-Venus.png"},
 ];
 
 //shuffle the cards, make them random. 
@@ -61,5 +67,13 @@ const cardGenerator = () => {
             }
         })
 };
-
 cardGenerator();
+
+// var cards = document.querySelector('.cardData')
+// cardData.addEventListener('click', function(){
+//     cardData.classList.toggle('is-flipped');
+
+
+
+//Inner text adds text inside a button
+//add the villan faces when the player chooses wrong. 

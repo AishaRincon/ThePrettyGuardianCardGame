@@ -42,13 +42,13 @@ section {
     height: 250px;
     background: #5A77D8;
     position: absolute;
+    backface-visibility: hidden;
 }
 
 .back{
     width: 200px;
     height: 250px;
-    background: #5A77D8;
-    backface-visibility: hidden;
+    background: #5A77D8
 }
 
 .cards {
@@ -58,6 +58,10 @@ section {
     transform-style: preserve-3d;
     transition: all 0.9s ease;
     transform: rotateY(180deg);
+}
+
+.wrapper {
+    padding: 50 50 50 50;
 }
 
 .flipCard {
