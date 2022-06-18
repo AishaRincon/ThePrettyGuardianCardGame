@@ -3,67 +3,65 @@ body{
     background-image: linear-gradient(#FFAFCC, #FFF6F9, #C3DBFD)
     }
 
-html {
-    min-height: 100vh;
-}
-
-h1{
-    text-align: center;
-    color: #5A77D8;
+h1 {
     font-family: 'Great Vibes', cursive;
     font-size: 75px;
-}
-
-.top-container {
-    display: grid;
-    grid-gap: 5px;
-    padding-left: 50px;
-    padding-right: 50px;
-    font-family: 'Abril Fatface';
     color: #5A77D8;
     text-align: center;
 }
 
-section {
+p {
+    font-family: 'Abril Fatface';
+    color: #FFF6F9;
+    text-align: center; 
+    background: #5A77D8;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 19px;
+}
+
+.container {
     display: grid;
-    box-sizing: border-box;
-    margin-right: 200px;
-    grid-template-columns: repeat(4, 13rem);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr;
     grid-gap: 10px;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
+    background: #FFAFCC;
+    max-width: 900px;
+    padding: 10px;
+    margin: 100px auto;
+    position: relative;
+    top: -790px;
+    border: #5A77D8 1px solid;
     perspective: 900px;
     transform: rotateY(-50%, -50%);
 }
 
-.front {
-    width: 200px;
-    height: 250px;
-    background: #5A77D8;
-    position: absolute;
-    backface-visibility: hidden;
-}
-
-.back{
-    width: 200px;
-    height: 250px;
-    background: #5A77D8
-}
-
 .cards {
-    position: relative;
-    padding-left: 200px;
-    padding-right: 250px;
+    background: #5A77D8;
+    border: black 1px solid;
+    border-radius: 5%;
+    text-align: center;
     transform-style: preserve-3d;
     transition: all 0.9s ease;
     transform: rotateY(180deg);
 }
 
-.wrapper {
-    padding: 50 50 50 50;
+.Moon {
+    position:relative; 
+    top: 25px;
+    background: #FFAFCC;
+    margin-left: 50px;
+    margin-right: 80%;
+    text-align: center;
+    border: #5A77D8 1px solid;
 }
 
-.flipCard {
-    transform: rotateY(180deg);
+.Luna {
+    position: relative;
+    top: -485px;
+    background: #FFAFCC;
+    margin-right: 50px;
+    margin-left: 1350px;
+    border: #5A77D8 1px solid;
+    text-align: center;
 }

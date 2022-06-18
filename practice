@@ -14,6 +14,46 @@ in the html
 <div class="cards"></div>
 <div class="cards"></div>
 
+
+<div class="container">
+<div class="cards"> 
+    <img src="./assets/Sailor-Jupiter.png" width="75" height="150" alt="Card Image">
+</div>
+<div class="cards">
+    <img src="./assets/Sailor-Mars.png" width="75" height="150" alt="Card Image">
+</div>
+<div class="cards">
+    <img src="./assets/Sailor-Neptune.png" width="75" height="150" alt="Card Image">
+</div>
+<div class="cards">
+    <img src="./assets/Sailor-Pluto.png" width="75" height="150" alt="Card Image">
+</div>
+<div class="cards">
+    <img src="./assets/Sailor-Saturn.png" width="75" height="150" alt="Card Image">
+</div>
+<div class="cards">
+    <img src="./assets/Sailor-Venus.png" width="75" height="150" alt="Card Image">
+</div>
+<div class="cards"> 
+    <img src="./assets/Sailor-Jupiter.png" width="75" height="150" alt="Card Image">
+</div>
+<div class="cards">
+    <img src="./assets/Sailor-Mars.png" width="75" height="150" alt="Card Image">
+</div>
+<div class="cards">
+    <img src="./assets/Sailor-Neptune.png" width="75" height="150" alt="Card Image">
+</div>
+<div class="cards">
+    <img src="./assets/Sailor-Pluto.png" width="75" height="150" alt="Card Image">
+</div>
+<div class="cards">
+    <img src="./assets/Sailor-Saturn.png" width="75" height="150" alt="Card Image">
+</div>
+<div class="cards">
+    <img src="./assets/Sailor-Venus.png" width="75" height="150" alt="Card Image">
+</div>
+</div>
+
 <div class="left-container">
 <div><img src="assets/Sailor-Moon.png" alt="Sailor Moon" width="200" class="center">
 </div>
@@ -23,22 +63,165 @@ in the html
 
 <div class="right-container"><img src="assets/Luna.png" alt="Luna" width="150">
 
-css formating
-.left-container{
+
+
+
+CSS
+h1{
+    text-align: center;
+    color: #5A77D8;
+    font-family: 'Great Vibes', cursive;
+    font-size: 75px;
+}
+
+.top-container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    font-family: 'Great Vibes';
-    color: #FFF6F9;
-    font-size: 2em;
-    font-weight: bold;
     grid-gap: 5px;
-    background-color: #5A77D8;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Abril Fatface';
+    color: #5A77D8;
+    text-align: center;
 }
 
-.right-container {
+section {
+    display: grid;
+    margin: fit-content;
+    grid-template-columns: repeat(4, 13rem);
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    background: #FFAFCC;
+    max-width: 1000px;
+    perspective: 900px;
+    transform: rotateY(-50%, -50%);
+}
+
+.front {
+    width: 200px;
+    height: 250px;
+    background: #5A77D8;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back{
+    width: 200px;
+    height: 250px;
+    background: #5A77D8
+}
+
+.cards {
     position: relative;
+    padding-left: 200px;
+    padding-right: 250px;
+    transform-style: preserve-3d;
+    transition: all 0.9s ease;
+    transform: rotateY(180deg);
 }
 
-* {
-    box-sizing: border-box;
+.wrapper {
+    padding: 50 50 50 50;
 }
+
+.flipCard {
+    transform: rotateY(180deg);
+}
+
+.cards:hover .front .back .section{
+    transform: rotate(0);
+}
+
+.flipCard {
+    transform: rotateY(180deg);
+}
+
+.flipCard{
+    transform: rotateY(180deg);
+}
+
+
+
+
+
+JAVASCRIPT
+
+const section = document.querySelector("section");
+const time = document.querySelector("span");
+const cardFlip = document.querySelector("span");
+
+//format image sizes
+
+//information for the cards
+function show_image(src, id){
+    var img = document.createElement("img");
+    imgSrc = "src"
+    imgId="name"
+    document.body.appendChild(img);
+}
+//Make an array for 12 cards
+const getData = () => [
+//first set of cards
+    {imgId:"Jupiter", imgSrc:"./assets/Sailor-Jupiter.png"},
+    {imgId:"Mars", imgSrc:"./assets/Sailor-Mars.png"},
+    {imgId:"Neptune", imgSrc:"./assets/Sailor-Neptune.png"},
+    {imgId:"Pluto", imgSrc:"./assets/Sailor-Pluto.png"},
+    {imgId:"Saturn", imgSrc:"./assets/Sailor-Saturn.png"},
+    {imgId:"Venus", imgSrc:"./assets/Sailor-Venus.png"},
+//second set of cards
+    {imgId:"Jupiter", imgSrc:"./assets/Sailor-Jupiter.png"},
+    {imgId:"Mars", imgSrc:"./assets/Sailor-Mars.png"},
+    {imgId:"Neptune", imgSrc:"./assets/Sailor-Neptune.png"},
+    {imgId:"Pluto", imgSrc:"./assets/Sailor-Pluto.png"},
+    {imgId:"Saturn", imgSrc:"./assets/Sailor-Saturn.png"},
+    {imgId:"Venus", imgSrc:"./assets/Sailor-Venus.png"},
+];
+
+//shuffle the cards, make them random. 
+const randomize = () => {
+    const cardData = getData();
+    cardData.sort(() => Math.random() - 0.5);
+    return cardData;
+};
+
+//generate the cards
+const cardGenerator = () => {
+    const cardData = randomize();
+//link to the html
+//Create a for loop to generate the cards
+    cardData.forEach((items) => {
+        const cards = document.createElement("div");
+        const front = document.createElement('img');
+        const back = document.createElement("div");
+//add classes to each element
+        cards.classList = "cards";
+        front.classList = "front";
+        back.classList = "back";
+//add the image to the source image
+        front.src = items.imgSrc;
+
+        section.appendChild(cards);
+        cards.appendChild(front);
+        cards.appendChild(back);
+
+//add eventlistener to get the cards to flip over
+//const cards = document.getElementById("cards")  
+
+        cards.addEventListener("click",flipCard) 
+            function flipCard(){
+                cardData.classList.toggle("flipCard");
+
+            }
+        })
+};
+cardGenerator();
+
+// var cards = document.querySelector('.cardData')
+// cardData.addEventListener('click', function(){
+//     cardData.classList.toggle('is-flipped');
+
+
+
+//Inner text adds text inside a button
+//add the villan faces when the player chooses wrong. 
