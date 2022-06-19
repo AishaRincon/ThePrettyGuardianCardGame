@@ -4,7 +4,7 @@ body{
     }
 
 h1 {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Great Vibes';
     font-size: 75px;
     color: #5A77D8;
     text-align: center;
@@ -20,32 +20,6 @@ p {
     font-size: 19px;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 2fr;
-    grid-gap: 10px;
-    background: #FFAFCC;
-    max-width: 900px;
-    padding: 10px;
-    margin: 100px auto;
-    position: relative;
-    top: -790px;
-    border: #5A77D8 1px solid;
-    perspective: 900px;
-    transform: rotateY(-50%, -50%);
-}
-
-.cards {
-    background: #5A77D8;
-    border: black 1px solid;
-    border-radius: 5%;
-    text-align: center;
-    transform-style: preserve-3d;
-    transition: all 0.9s ease;
-    transform: rotateY(180deg);
-}
-
 .Moon {
     position:relative; 
     top: 25px;
@@ -58,10 +32,45 @@ p {
 
 .Luna {
     position: relative;
-    top: -485px;
+    top: -480px;
     background: #FFAFCC;
     margin-right: 50px;
     margin-left: 1350px;
     border: #5A77D8 1px solid;
     text-align: center;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 10px;
+    background: #FFAFCC;
+    border: #5A77D8 1px solid;
+    max-width: 900px;
+    padding: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -685px;
+}
+
+.cards {
+    position: relative;
+    width: 175px;
+    height: 200px;
+    text-align: center;
+    grid-gap: 5px;
+    background: #5A77D8;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.img {
+    text-align: center;
+}
+
+.cards.clicked {
+    background-color: #C3DBFD;
+}
+
+

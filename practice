@@ -141,6 +141,23 @@ section {
     transform: rotateY(180deg);
 }
 
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 2fr;
+grid-gap: 10px;
+background: #FFAFCC;
+max-width: 900px;
+padding: 10px;
+margin: 100px auto;
+position: absolute;
+top: -790px;
+border: #5A77D8 1px solid;
+perspective: 900px;
+transform: rotateY(-50%, -50%);
+
+.flip-card:hover {
+    transform: rotateY(180deg);
+}
 
 
 
