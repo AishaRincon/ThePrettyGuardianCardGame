@@ -43,26 +43,35 @@ p {
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-gap: 10px;
-    background: #FFAFCC;
-    border: #5A77D8 1px solid;
-    max-width: 900px;
+    background: #5A77D8;
+    border: black 1px solid;
+    max-width: 800px;
     padding: 30px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: -685px;
+    margin-top: -845px;
+    position: relative;
+    border-radius: 15px;
 }
 
 .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
     position: relative;
-    width: 175px;
+    width: 150px;
     height: 200px;
     text-align: center;
-    grid-gap: 5px;
-    background: #5A77D8;
     border-radius: 15px;
     padding: 20px;
+    backface-visibility: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s all ease;
+    background-color: #a2d2ff;
 }
 
 .img {
@@ -70,7 +79,41 @@ p {
 }
 
 .cards.clicked {
-    background-color: #C3DBFD;
+    background-color: #ffc8dd;
 }
 
+.cards.checked {
+    background-color: #f7e3af;
+}
 
+.cards:hover {
+    transform: rotate(1turn);
+}
+
+.card.clicked img, 
+.card.checked img {
+    opacity: 1;
+}
+
+.card.shake {
+    background-color: #ff0a64;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+    
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+    
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      }
+}
