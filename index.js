@@ -49,7 +49,7 @@ const scoutsSaved = 6;
 scoutsSavedCount.textContent = scoutsSaved;
 
 //randomize the cards
-let 
+var allCards = document.getElementById("cards");
 
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
@@ -74,6 +74,36 @@ function shuffle(array) {
   }
   
   // Used like so
-  var arr = [sailor];
-  shuffle(arr);
-  console.log(arr);
+  var array = [cards];
+  shuffle(array);
+  console.log(array);
+
+  //create a score count for Scouts Saved
+  //when a match is made, the count will increase by 1
+ 
+
+  //Create a button for start
+
+
+  //when the start button is clicked, 
+  //the timer will start counting down AND all the cards will reshuffle
+    const startingMinutes = 1;
+    let time = startingMinutes * 60; 
+
+    const countdown = document.getElementById("time");
+
+    setInterval(updateCountDown, 1000);
+
+    function updateCountDown() {
+        const minutes = Math.floor(time / 60);
+        let seconds = time %60;
+
+//Make the timer end at 0
+    
+        seconds = seconds <1 ? "0" + seconds : seconds;
+        
+        countdown.innerHTML = '${minutes}: ${seconds}';
+        time--;
+    }
+  //when the timer reaches 0 the player is no longer allowed to click on the cards.
+  //All cards get turned back over and reshuffled. 
