@@ -17,7 +17,7 @@ cards.forEach((cards) => {
 
             if(firstSelection === secondSelection){
                 const correctCards = document.querySelectorAll(
-                    ".cards[sailor= '" + firstSelection + "']"
+                    ".cards[sailor='" + firstSelection + "']"
             );
 
 //if two of the same cards are selected then it'll show as checked if the cards don't match then it remains as clicked
@@ -42,41 +42,55 @@ cards.forEach((cards) => {
     });
 });
 
-//score
-const scoutsSavedCount = document.querySelector("span");
-const scoutsSaved = 6;
+//Timer
+import Timer from "./js/timer.js";
 
-scoutsSavedCount.textContent = scoutsSaved;
+new Timer(
+    document.querySelector("Timer")
+);
 
-//randomize the cards
-var allCards = document.getElementById("cards");
+// //score
+// const scoutsSavedCount = document.querySelector("span");
+// const scoutsSaved = 6;
 
-function shuffle(array) {
-    let currentIndex = array.length, randomIndex;
-  
-    // While there remain elements to shuffle.
-    while (currentIndex != 0) {
-  
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-  
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = 
-      [array[randomIndex], array[currentIndex]];
-      [array[randomIndex], array[currentIndex]];
-      [array[randomIndex], array[currentIndex]];
-      [array[randomIndex], array[currentIndex]];
-      [array[randomIndex], array[currentIndex]];
-    }
-  
-    return array;
-  }
-  
-  // Used like so
-  var array = [cards];
-  shuffle(array);
-  console.log(array);
+// scoutsSavedCount.textContent = scoutsSaved;
+//Randomize the cards
+//make an array 
+// var sailors = () => [
+//     {imgSrc:"./assets/Sailor-Jupiter.png", sailor:"Jupiter"},
+//     {imgSrc:"./assets/Sailor-Mars.png", sailor:"Mars"},
+//     {imgSrc:"./assets/Sailor-Neptune.png", sailor:"Neptune"},
+//     {imgSrc:"./assets/Sailor-Pluto.png", sailor:"Pluto"},
+//     {imgSrc:"./assets/Sailor-Saturn.png", sailor:"Saturn"},
+//     {imgSrc:"./assets/Sailor-Venus.png", sailor:"Venus"},
+//     {imgSrc:"./assets/Sailor-Jupiter.png", sailor:"Jupiter"},
+//     {imgSrc:"./assets/Sailor-Mars.png", sailor:"Mars"},
+//     {imgSrc:"./assets/Sailor-Neptune.png", sailor:"Neptune"},
+//     {imgSrc:"./assets/Sailor-Pluto.png", sailor:"Pluto"},
+//     {imgSrc:"./assets/Sailor-Saturn.png", sailor:"Saturn"},
+//     {imgSrc:"./assets/Sailor-Venus.png", sailor:"Venus"},
+// ];
+
+const name = "frontOfCard";
+console.log(name)
+export {};
+
+let frontOfCard = {Jupiter, Mars, Neptune, Pluto, Saturn, Venus, Jupiter, Mars, Neptune, Pluto, Saturn, Venus}
+
+let arrayShuffle = function(frontOfCard) {
+    let newPos, 
+        temp;
+
+        for (let i=frontOfCard.length -1; i > 0; i--) {
+            newPos = Math.floor(Math.random() * (i + 1));
+            temp=frontOfCard[i];
+            frontOfCard[i]=frontOfCard[newPos];
+            frontOfCard[newPos]=temp;
+        }
+        return frontOfCard;
+};
+
+
 
   //create a score count for Scouts Saved
   //when a match is made, the count will increase by 1
@@ -84,26 +98,7 @@ function shuffle(array) {
 
   //Create a button for start
 
-
   //when the start button is clicked, 
   //the timer will start counting down AND all the cards will reshuffle
-    const startingMinutes = 1;
-    let time = startingMinutes * 60; 
-
-    const countdown = document.getElementById("time");
-
-    setInterval(updateCountDown, 1000);
-
-    function updateCountDown() {
-        const minutes = Math.floor(time / 60);
-        let seconds = time %60;
-
-//Make the timer end at 0
-    
-        seconds = seconds <1 ? "0" + seconds : seconds;
-        
-        countdown.innerHTML = '${minutes}: ${seconds}';
-        time--;
-    }
   //when the timer reaches 0 the player is no longer allowed to click on the cards.
   //All cards get turned back over and reshuffled. 

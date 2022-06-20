@@ -10,7 +10,7 @@ body{
 h1 {
     font-family: 'Great Vibes';
     font-size: 75px;
-    color: #5A77D8;
+    color: #2744a5;
     text-align: center;
 }
 
@@ -18,7 +18,7 @@ h4 {
     font-family: 'Abril Fatface';
     color: #FFF6F9;
     text-align: center; 
-    background: #5A77D8;
+    background: #2744a5;
     margin-left: 80px;
     margin-right: 80px;
     font-size: 19px;
@@ -27,7 +27,7 @@ h4 {
 p {
     font-family: 'Great Vibes';
     color: #FFF6F9;
-    background: #5A77D8;
+    background: #2744a5;
     font-size: 30px;
     margin-right: 40px;
     margin-left: 40px;
@@ -59,7 +59,7 @@ p {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 10px;
-    background: #5A77D8;
+    background: #2744a5;
     border: black 1px solid;
     max-width: 800px;
     padding: 30px;
@@ -130,4 +130,30 @@ p {
       40%, 60% {
         transform: translate3d(4px, 0, 0);
       }
+}
+
+.timer {
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #2744a5;
+    font-weight: bold;
+}
+
+.timer__btn {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: white;
+    background-color: #2744a5;
+    border: none;
+    cursor: pointer;
+}
+
+.timer__btn--start {
+    background: #38b000;
+}
+
+.timer__btn--reset {
+    background: #ef233c;
 }
