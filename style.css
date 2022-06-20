@@ -17,7 +17,6 @@ body {
     grid-auto-rows: minmax(40px, auto);
     grid-auto-columns: minmax(40px, auto);
     grid-gap: 10px;
-    border: black 1px solid;
     }
 
 .h1 {
@@ -29,7 +28,6 @@ body {
     text-align: center;
     font-weight: 800;
     padding: 15px;
-    border: black 1px solid;
 }
 
 .h2 {
@@ -40,19 +38,16 @@ body {
     color: #FFF6F9;
     background: #2744a5;
     padding: 15px;
-    border: black 1px solid;
 } 
 
 .Moon {
     text-align: center;
     background: #FFAFCC;
-    border: black 1px solid;
 }
 
 .Luna {
     text-align: center;
     background: #FFAFCC;
-    border: black 1px solid;
 }
 
 .game-board {
@@ -73,7 +68,6 @@ body {
     place-content: center;
     grid-gap: 15px;
     grid-template-columns: repeat(4, 1fr);
-    border: black 2px solid;
 }
 
 .card {
@@ -92,21 +86,22 @@ body {
     transition 0.3s all ease;
 }
 
-.card.clicked {
-    background-color: #ffc8dd;
+.card.clicked img{
+    opacity: 1;
+    background: #a2d2ff;
+    border-radius: 15px;
 }
 
 .card.checked {
-    background-color: #f7e3af;
+    background-color: #ffe566;
+}
+
+.card.checked img{
+    opacity: 1;
 }
 
 .card:hover {
     transform: scale(1.5);
-}
-
-.card.clicked img, 
-.card.checked img {
-    
 }
 
 .card.shake {
