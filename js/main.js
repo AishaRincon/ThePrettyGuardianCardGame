@@ -2,8 +2,8 @@ let counter = 0
 let firstSelection = "";
 let secondSelection = "";
 
-
-const cards = document.querySelectorAll(".cards");
+//select all of the cards and the individual ones
+const cards = document.querySelectorAll(".cards .card");
 cards.forEach((cards) => {
     cards.addEventListener("click", () =>{
         cards.classList.add("clicked");
