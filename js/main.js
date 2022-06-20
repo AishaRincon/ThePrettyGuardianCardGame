@@ -7,6 +7,7 @@ const cards = document.querySelectorAll(".cards .card");
 cards.forEach((card) => {
     card.addEventListener("click", () =>{
 //when ever a card is clicked on its documented
+//instead of creating an array, I'mm pulling from the sailor attribute i addedd to all the cards. 
         card.classList.add("clicked");
 //if the counter is set to 0 then no cards have been selected. Check if the two cards are a match
         if(counter === 0){
@@ -45,3 +46,4 @@ cards.forEach((card) => {
         }
     });
 });
+

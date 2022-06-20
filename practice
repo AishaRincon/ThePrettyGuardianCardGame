@@ -378,3 +378,89 @@ html for timer
     <span class="material-symbols-outlined">replay</span>
     </button>
     <p></p>
+
+    
+
+
+
+    record music player
+
+
+.music-container {
+    background-color: #a2d2ff;
+    width: 350px;
+    height: 20px;
+    border-radius: 15px;
+    display: flex;
+    top: -175px;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0;
+    z-index: 10;
+    border: yellow 1px solid;
+}
+
+.img-container {
+    height: 200px;
+    width: 300;
+    position: relative;
+    width: 210px;
+    border: black 1px solid;
+}
+
+.img-container img {
+    width: inherit;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -100px;
+    bottom: 0;
+    left: 0;
+    border: #FFAFCC 4px solid;
+
+    animation: rotate 3s linear infinite;
+
+    animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.navigation {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border: #ff0a64 1px solid;
+}
+
+.action-btn {
+    height: 40px;
+    width: 50px;
+    background-color: #FFF6F9;
+    border: #2744a5;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.action-btn-big {
+    font-size: 35px;
+    
+}

@@ -5,7 +5,7 @@
 
 body {
     height: 100vh;
-    background-image: linear-gradient(#FFAFCC, #FFF6F9, #a2d2ff)
+    background-image: linear-gradient(#FFAFCC, #FFF6F9, #a2d2ff);
 }
 
 .game {
@@ -52,7 +52,7 @@ body {
 
 .Luna img {
     position: relative;
-    top: 295px;
+    top: 5px;
 }
 
 .game-board {
@@ -62,7 +62,6 @@ body {
     padding: 0%;
     align-self: center;
     justify-self: center;
-
 }
 
 .cards {
@@ -73,6 +72,7 @@ body {
     place-content: center;
     grid-gap: 15px;
     grid-template-columns: repeat(4, 1fr);
+
 }
 
 .card {
@@ -84,11 +84,12 @@ body {
     text-align: center;
     cursor: pointer;
     transition: 0.5s all ease;
+    border: black 1px solid;
 }
 
 .card img {
     opacity: 0;
-    transition 0.3s all ease;
+    transition: 0.3s all ease;
 }
 
 .card.clicked img{
@@ -131,3 +132,11 @@ body {
         transform: translate3d(4px, 0, 0);
       }
 }
+
+audio::-webkit-media-controls-panel {
+    background-color: #2744a5;
+  }
+
+  .audio {
+      top: 100px;
+  }
