@@ -50,6 +50,11 @@ body {
     background: #FFAFCC;
 }
 
+.Luna img {
+    position: relative;
+    top: 295px;
+}
+
 .game-board {
     height: 600px;
     width: 650px;
