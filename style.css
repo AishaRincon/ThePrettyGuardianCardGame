@@ -65,7 +65,7 @@ p {
     padding: 30px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: -925px;
+    margin-top: -725px;
     position: relative;
     border-radius: 15px;
 }
@@ -132,28 +132,3 @@ p {
       }
 }
 
-.timer {
-    font-size: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: #2744a5;
-    font-weight: bold;
-}
-
-.timer__btn {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    color: white;
-    background-color: #2744a5;
-    border: none;
-    cursor: pointer;
-}
-
-.timer__btn--start {
-    background: #38b000;
-}
-
-.timer__btn--reset {
-    background: #ef233c;
-}

@@ -274,3 +274,107 @@ console.log(array);
   
 //     return array;
 //   }
+
+
+
+// new Timer(
+//     document.querySelector("Timer")
+// );
+
+// //score
+// const scoutsSavedCount = document.querySelector("span");
+// const scoutsSaved = 6;
+
+// scoutsSavedCount.textContent = scoutsSaved;
+//Randomize the cards
+//make an array 
+// var sailors = () => [
+//     {imgSrc:"./assets/Sailor-Jupiter.png", sailor:"Jupiter"},
+//     {imgSrc:"./assets/Sailor-Mars.png", sailor:"Mars"},
+//     {imgSrc:"./assets/Sailor-Neptune.png", sailor:"Neptune"},
+//     {imgSrc:"./assets/Sailor-Pluto.png", sailor:"Pluto"},
+//     {imgSrc:"./assets/Sailor-Saturn.png", sailor:"Saturn"},
+//     {imgSrc:"./assets/Sailor-Venus.png", sailor:"Venus"},
+//     {imgSrc:"./assets/Sailor-Jupiter.png", sailor:"Jupiter"},
+//     {imgSrc:"./assets/Sailor-Mars.png", sailor:"Mars"},
+//     {imgSrc:"./assets/Sailor-Neptune.png", sailor:"Neptune"},
+//     {imgSrc:"./assets/Sailor-Pluto.png", sailor:"Pluto"},
+//     {imgSrc:"./assets/Sailor-Saturn.png", sailor:"Saturn"},
+//     {imgSrc:"./assets/Sailor-Venus.png", sailor:"Venus"},
+// ];
+
+const name = "frontOfCard";
+console.log(name)
+export {};
+
+let frontOfCard = {Jupiter, Mars, Neptune, Pluto, Saturn, Venus, Jupiter, Mars, Neptune, Pluto, Saturn, Venus}
+
+let arrayShuffle = function(frontOfCard) {
+    let newPos, 
+        temp;
+
+        for (let i=frontOfCard.length -1; i > 0; i--) {
+            newPos = Math.floor(Math.random() * (i + 1));
+            temp=frontOfCard[i];
+            frontOfCard[i]=frontOfCard[newPos];
+            frontOfCard[newPos]=temp;
+        }
+        return frontOfCard;
+};
+
+
+
+  //create a score count for Scouts Saved
+  //when a match is made, the count will increase by 1
+ 
+
+  //Create a button for start
+
+  //when the start button is clicked, 
+  //the timer will start counting down AND all the cards will reshuffle
+  //when the timer reaches 0 the player is no longer allowed to click on the cards.
+  //All cards get turned back over and reshuffled. 
+
+
+
+  css for buttons
+  .timer {
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #2744a5;
+    font-weight: bold;
+}
+
+.timer__btn {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: white;
+    background-color: #2744a5;
+    border: none;
+    cursor: pointer;
+}
+
+.timer__btn--start {
+    background: #38b000;
+}
+
+.timer__btn--reset {
+    background: #ef233c;
+}
+
+html for timer
+<div class="timer">
+    <span class="timer__part timer__part--minutes">0</span>
+    <span class="timer__part">:</span>
+    <span class="timer__part timer__part--minutes">00</span>
+    <p></p>
+    <button type="btn" class="timer__btn timer__btn--control timer__btn--start">
+    <span class="material-symbols-outlined">play_circle</span>
+    </button>
+    <p></p>
+    <button type="btn" class="timer__btn timer__btn--control timer__btn--reset">
+    <span class="material-symbols-outlined">replay</span>
+    </button>
+    <p></p>
