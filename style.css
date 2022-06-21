@@ -140,3 +140,8 @@ audio::-webkit-media-controls-panel {
   .audio {
       top: 100px;
   }
+
+  .p {
+    font-family: 'Abril Fatface';
+    
+  }
